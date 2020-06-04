@@ -12,7 +12,7 @@ router.get('/cases/:id', function(req, res, next) {
       .then((response) => {
         const json = JSON.parse(response);
 
-        htmlPage.replace('<title>vPOP</title>',`         
+        res.send(htmlPage.replace('<title>vPOP</title>',`         
           <title>vPOP</title>
           <meta property="og:title" content="${json.name}" />
           <meta property="og:url" content="${json.url}" />
@@ -21,9 +21,7 @@ router.get('/cases/:id', function(req, res, next) {
           <meta name="twitter:card" content="${json.thumbUrl}" />
           <meta name="twitter:title" content="${json.name}" />
           <meta name="twitter:description" content="${json.description}" />
-          <meta name="twitter:image" content="${json.thumbUrl}" />`);
-  
-        res.send(htmlPage);
+          <meta name="twitter:image" content="${json.thumbUrl}" />`));
   
       })
     )
