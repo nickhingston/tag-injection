@@ -18,14 +18,14 @@ router.get('/cases/:id', function(req, res, next) {
           thumbUrl: `${apiUrl}/xrays/${json.xrays[0].id}/thumb`,
           description: `temp description!`   
         };
-        
+
         res.send(htmlPage.replace('<title>vPOP</title>',`         
           <title>vPOP</title>
           <meta property="og:title" content="${tagData.name}" />
           <meta property="og:url" content="${tagData.url}" />
           <meta property="og:description" content="${tagData.description}" />
           <meta property="og:image" content="${tagData.thumbUrl}" />
-          <meta name="twitter:card" content="${tagData.thumbUrl}" />
+          <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="${tagData.name}" />
           <meta name="twitter:description" content="${tagData.description}" />
           <meta name="twitter:image" content="${tagData.thumbUrl}" />`));
