@@ -2,7 +2,7 @@ const express = require('express');
 const rp = require('request-promise')
 const router = express.Router();
 
-const apiUrl = "https://dev.vpop-pro.com/api/v1"
+const apiUrl = "https://vpop-pro.com/api/v1"
 const appUrl = "https://dev-app.vpop-pro.com/"
 
 let htmlPage = ""
