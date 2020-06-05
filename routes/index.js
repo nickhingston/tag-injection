@@ -27,7 +27,7 @@ router.get('/cases/:id', (req, res, next) => {
 
       const tagData = {
         name: json.name,
-        url: `${req.protocol}://${req.get('host')}/cases/${req.params.id}`,
+        url: `${appUrl}/cases/${req.params.id}`,
         thumbUrl: `${apiUrl}/xrays/${json.xrays[0].id}/thumb`,
         description: `temp description!`   
       };
