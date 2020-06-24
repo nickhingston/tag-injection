@@ -28,7 +28,8 @@ router.get('/cases/:id', (req, res, next) => {
       const tagData = {
         name: json.name,
         url: `${appUrl}/cases/${req.params.id}`,
-        thumbUrl: `${apiUrl}/xrays/${json.xrays[0].id}/thumb`
+        thumbUrl: `${apiUrl}/xrays/${json.xrays[0].id}/thumb`,
+        description: 'Made by VPOP PRO'
       };
 
       res.send(htmlPage.replace('<title>vPOP</title>',`         
@@ -39,7 +40,7 @@ router.get('/cases/:id', (req, res, next) => {
         <meta property="og:image" content="${tagData.thumbUrl}" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="${tagData.name}" />
-        <meta name="twitter:description" content=“Made by VPOP PRO" />
+        <meta name="twitter:description" content=“${tagData.description}" />
         <meta name="twitter:image" content="${tagData.thumbUrl}" />`
         ));
 
