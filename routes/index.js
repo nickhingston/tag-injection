@@ -29,7 +29,7 @@ router.get('/cases/:id', (req, res, next) => {
         name: json.name,
         url: `${appUrl}/cases/${req.params.id}`,
         thumbUrl: `${apiUrl}/xrays/${json.xrays[0].id}/thumb`,
-        description: 'Made by VPOP PRO'
+        description: 'Made&nbsp;by&nbsp;VPOP&nbsp;PRO'
       };
 
       res.send(htmlPage.replace('<title>vPOP</title>',`         
