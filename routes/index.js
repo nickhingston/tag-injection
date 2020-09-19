@@ -2,8 +2,8 @@ const express = require('express');
 const rp = require('request-promise')
 const router = express.Router();
 
-const apiUrl = "https://dev.vpop-pro.com/api/v1"
-const appUrl = "https://dev-app.vpop-pro.com/"
+const apiUrl = "https://vpop-pro.com/api/v1"
+const appUrl = "https://app.vpop-pro.com"
 
 let htmlPage = ""
 
@@ -34,11 +34,14 @@ router.get('/cases/:id', (req, res, next) => {
 
       res.send(htmlPage.replace('<title>vPOP</title>',`         
         <title>vPOP</title>
-        <meta property="og:type" content="website" />
+	<meta name="description" content="Veterinary Preoperative Orthopaedic Planner" />
+	<meta property="fb:app_id" content="267530317797644" />
+	<meta property="og:description" content="Veterinary Preoperative Orthopaedic Planner" />      
+        <meta property="og:type" content="article" />
         <meta property="og:title" content="${tagData.name}" />
         <meta property="og:url" content="${tagData.url}" />
-        <meta property="og:image:secure_url" itemprop="image" content="${tagData.thumbUrl}" />
-        <meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:image" itemprop="image" content="${tagData.thumbUrl}" />
+	<meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="${tagData.name}" />
         <meta name="twitter:description" content=“${tagData.description}" />
         <meta name="twitter:image" content="${tagData.thumbUrl}" />`
