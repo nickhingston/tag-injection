@@ -37,7 +37,7 @@ router.get('/cases/:id', (req, res, next) => {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="${tagData.name}" />
         <meta property="og:url" content="${tagData.url}" />
-        <meta property="og:image" content="${tagData.thumbUrl}" />
+        <meta property="og:image:secure_url" itemprop="image" content="${tagData.thumbUrl}" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="${tagData.name}" />
         <meta name="twitter:description" content=“${tagData.description}" />
