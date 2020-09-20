@@ -28,7 +28,7 @@ router.get('/cases/:id', (req, res, next) => {
       const tagData = {
         name: json.name,
         url: `${appUrl}/cases/${req.params.id}`,
-        thumbUrl: `${apiUrl}/xrays/${json.xrays[0].id}/thumb`,
+        thumbUrl: `${apiUrl}/xrays/${json.xrays[0].id}/thumb.jpeg`,
         description: 'Made&nbsp;by&nbsp;VPOP&nbsp;PRO'
       };
 
