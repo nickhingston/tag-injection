@@ -37,7 +37,7 @@ module.exports = {
       user: 'vpop',
       host: 'beta-app.vpop-pro.com',
       ref: 'origin/referral-workflow',
-      repo: 'git@github.com:nickhingston/tag-injection.git',
+      repo: 'https://github.com/nickhingston/tag-injection.git',
       path: '/home/vpop/tag-injection',
       'pre-deploy-local': '',
       'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production --update-env'
