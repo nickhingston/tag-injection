@@ -13,7 +13,7 @@ module.exports = {
     },
     env_beta: {
       NODE_ENV: 'production',
-      API_URL: 'https://dev.vpop-pro.com/api/v1',
+      API_URL: 'https://vpop-pro.com/api/v1',
       APP_URL: 'https://beta-app.vpop-pro.com'
     },
     env_production: {
